@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Birthday Deployment 🎂</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     ANIMATED BACKGROUND
+     ========================================================= -->
+
+<div class="background-effects">
+
+    <div class="gradient-blob blob-one"></div>
+    <div class="gradient-blob blob-two"></div>
+    <div class="gradient-blob blob-three"></div>
+
+    <span class="floating-item balloon balloon-one">🎈</span>
+    <span class="floating-item balloon balloon-two">🎈</span>
+    <span class="floating-item balloon balloon-three">🎈</span>
+
+    <span class="floating-item heart heart-one">💗</span>
+    <span class="floating-item heart heart-two">💖</span>
+    <span class="floating-item heart heart-three">💕</span>
+    <span class="floating-item heart heart-four">💓</span>
+
+    <span class="floating-item heart heart-one">💃</span>
+    <span class="floating-item heart heart-two">😉</span>
+    <span class="floating-item heart heart-three">😇</span>
+    <span class="floating-item heart heart-four">🤩</span>
+
+    <span class="floating-item sparkle sparkle-one">✦</span>
+    <span class="floating-item sparkle sparkle-two">✧</span>
+    <span class="floating-item sparkle sparkle-three">✨</span>
+    <span class="floating-item sparkle sparkle-four">✦</span>
+
+        <span class="floating-item balloon balloon-two">🎈</span>
+    <span class="floating-item balloon balloon-three">🎈</span>
+
+    <span class="floating-item heart heart-one">💗</span>
+    <span class="floating-item heart heart-two">💖</span>
+    <span class="floating-item heart heart-three">💕</span>
+    <span class="floating-item heart heart-four">💓</span>
+
+    <span class="floating-item heart heart-one">💃</span>
+    <span class="floating-item heart heart-two">😉</span>
+    <span class="floating-item heart heart-three">🎶</span>
+    <span class="floating-item heart heart-four">🤩</span>
+
+    <span class="floating-item sparkle sparkle-one">💃🏻</span>
+    <span class="floating-item sparkle sparkle-two">🙈</span>
+    <span class="floating-item sparkle sparkle-three">😘</span>
+    <span class="floating-item sparkle sparkle-four">🥳</span>
+
+</div>
+
+
+<!-- =========================================================
+     MAIN APP
+     ========================================================= -->
+
+<main id="app">
+
+
+    <!-- =====================================================
+         SCREEN 1 — PRODUCTION INCIDENT
+         ===================================================== -->
+
+    <section id="incident-screen" class="screen active">
+
+        <div class="birthday-card incident-card">
+
+            <div class="top-decoration">
+                <span>✨</span>
+                <span>💗</span>
+                <span>🥳</span>
+                <span>💃🏻</span>
+                <span>✨</span>
+            </div>
+
+            <div class="status-icon danger-icon">
+                🚨
+            </div>
+
+            <!-- <div class="small-label">
+               “Hey, I have a very important request for you…” 💌
+            </div> -->
+
+<h4>Oye Pagal Ladki,</h4>
+                <h6>
+                I was trying to send you something today...<br>
+                but apparently,<br>
+                the request isn't going through. 😅
+                </h6>
+
+            <div class="status-box">
+
+                               <div class="status-row">
+                    <span>Subject</span>
+                    <strong>Birthday wish</strong>
+                </div>
+
+                <div class="status-row">
+                    <span>Status! code</span>
+                    <strong class="error-status">INTERNAL_SERVER_ERROR</strong>
+                 </div>
+
+                <div class="status-row">
+                    <span>Environment</span>
+                    <strong>Production</strong>
+                </div>
+
+            </div>
+
+            <p class="main-description">
+And honestly... this is one request I really don't want to fail. ❤️
+            </p>
+
+            <p class="sub-description">
+                So I need your help. 😉,
+               Will you help me fix it?
+            </p>
+
+            <button
+                    class="primary-btn"
+                    onclick="goToScreen('debug-screen')"
+            >
+                Let's! fix😎
+            </button>
+            <br>
+
+            <div class="tiny-tech-text">
+                incident-id: birthday-2026
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 2 — DEBUGGING
+         ===================================================== -->
+
+    <section id="debug-screen" class="screen">
+
+        <div class="birthday-card">
+
+            <div class="screen-icon">
+                🔍
+            </div>
+
+            <div class="small-label">
+                DEBUGGING REQUIRED
+            </div>
+
+            <h4>
+                Ajj bhi code mein error. 😏<br>
+                
+            </h4>
+
+            <p class="question-description">
+                Choose the component responsible
+                for today's special event murderrer.
+            </p>
+
+                        <p class="question-description">
+                Tum hi chuno kismeein issue ho sakta hai.. 😩
+            </p>
+
+            <div class="choice-container">
+
+                <button
+                        class="choice-btn wrong"
+                        onclick="wrongAnswer(this)"
+                >
+                    <span class="choice-icon">🗄️</span>
+                    <span class="choice-text">
+                        <strong>Database</strong>
+                        <small>connected. receiving request</small>
+                    </span>
+                </button>
+
+
+                <button
+                        class="choice-btn wrong"
+                        onclick="wrongAnswer(this)"
+                >
+                    <span class="choice-icon">☁️</span>
+                    <span class="choice-text">
+                        <strong>Cloud Server</strong>
+                        <small>Still running...</small>
+                    </span>
+                </button>
+
+
+                <button
+                        class="choice-btn correct"
+                        onclick="correctAnswer(this)"
+                >
+                    <span class="choice-icon">👽</span>
+                    <span class="choice-text">
+                        <strong>Code base..</strong>
+                        <small>Critical dependency</small>
+                    </span>
+                </button>
+
+
+                <button
+                        class="choice-btn wrong"
+                        onclick="wrongAnswer(this)"
+                >
+                    <span class="choice-icon">🤖</span>
+                    <span class="choice-text">
+                        <strong>Jenkins</strong>
+                        <small>Just doing its job</small>
+                    </span>
+                </button>
+
+            </div>
+
+            <div
+                    id="debug-result"
+                    class="result-message"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 3 — API REQUEST
+         ===================================================== -->
+
+    <section id="api-screen" class="screen">
+
+        <div class="birthday-card">
+
+            <div class="screen-icon">
+                💻
+            </div>
+
+            <div class="small-label">
+                💌 The Birthday Request
+            </div>
+
+            <h4>
+                 Achha. ye request bhejna hai..
+            </h4>
+
+            <p class="question-description">
+                We found one final request
+                that needs to be processed.
+            </p>
+
+
+            <div class="code-card">
+
+                <div class="code-header">
+
+                    <div class="window-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span class="code-title">
+                        birthday-request.json
+                    </span>
+
+                </div>
+
+
+                <div class="code-content">
+
+                    <div>
+                        <span class="code-keyword">POST</span>
+                        <span class="code-url">
+                            /api/v1/birthday
+                        </span>
+                    </div>
+
+                    <!-- <br> -->
+
+                    <div>{</div>
+
+                    <div class="code-indent">
+                        <span class="code-property">
+                            "recipient"
+                        </span>:
+                        <span class="code-boolean">
+                            Chetna
+                        </span>,
+                    </div>
+
+                    <div class="code-indent">
+                        <span class="code-property">
+                            "occasion"
+                        </span>:
+                        <span class="code-string">
+                            "Birthday"
+                        </span>,
+                    </div>
+
+                    <div class="code-indent">
+                        <span class="code-property">
+                            "priority"
+                        </span>:
+                        <span class="code-boolean">
+                            VERY HIGH
+                        </span>
+                    </div>
+
+                    <div class="code-indent">
+                        <span class="code-property">
+                            "message"
+                        </span>:
+                        <span class="code-boolean">
+                            Make this birthday special
+                        </span>
+                    </div>
+
+                    <div>}</div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                    class="primary-btn"
+                    onclick="testBirthdayApi()"
+            >
+                🚀 Send the Request
+            </button>
+
+
+            <div
+                    id="api-result"
+                    class="result-message"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 4 — CI/CD DEPLOYMENT
+         ===================================================== -->
+
+    <section id="deployment-screen" class="screen">
+
+        <div class="birthday-card deployment-card">
+
+            <div class="screen-icon">
+                🚀
+            </div>
+
+            <div class="small-label">
+                💗 Birthday Preparation Pipeline
+            </div>
+
+<h4>
+    Preparing Something
+    Special...
+</h4>
+
+<p class="question-description">
+    Just a few little things
+    before your surprise is ready.
+</p>
+
+
+            <div class="pipeline">
+
+
+                <!-- UNIT TEST -->
+
+                <div
+                        class="pipeline-step"
+                        id="step-1"
+                >
+
+                    <div class="pipeline-icon">
+                        🧠
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <strong>
+                            Memories loaded
+                        </strong>
+
+                        <small>
+                            Waiting...
+                        </small>
+
+                    </div>
+
+                    <div class="pipeline-status">
+                        ○
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <!-- Birthday wishes prepared -->
+
+                <div
+                        class="pipeline-step"
+                        id="step-2"
+                >
+
+                    <div class="pipeline-icon">
+                        💌
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <strong>
+                            Birthday wishes prepared
+                        </strong>
+
+                        <small>
+                            Waiting...
+                        </small>
+
+                    </div>
+
+                    <div class="pipeline-status">
+                        ○
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <!-- ✓ Happiness checks passed -->
+
+                <div
+                        class="pipeline-step"
+                        id="step-3"
+                >
+
+                    <div class="pipeline-icon">
+                        ✨
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <strong>
+                            Happiness checks passed
+
+                        </strong>
+
+                        <small>
+                            Waiting...
+                        </small>
+
+                    </div>
+
+                    <div class="pipeline-status">
+                        ○
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-line"></div>
+
+
+                <!-- Final surprise packaged -->
+
+                <div
+                        class="pipeline-step"
+                        id="step-4"
+                >
+
+                    <div class="pipeline-icon">
+                        🎀
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <strong>
+                            Final surprise packaged
+                        </strong>
+
+                        <small>
+                            Waiting...
+                        </small>
+
+                    </div>
+
+                    <div class="pipeline-status">
+                        ○
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                    id="deployment-message"
+                    class="deployment-message"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 5 — FINAL ISSUE
+         ===================================================== -->
+
+    <section id="final-deploy-screen" class="screen">
+
+        <div class="birthday-card final-issue-card">
+
+            <div class="screen-icon warning-icon">
+                ⚠️
+            </div>
+
+            <div class="small-label">
+                ⚠ One final problem...
+            </div>
+
+            <br>
+
+        <div class="small-label">
+            BirthdayWish.java <br>
+        </div>
+
+            <!-- <h2>
+                BirthdayWish.java
+                errordetected...
+            </h2> -->
+
+            <div class="issue-box">
+
+                <div class="issue-header">
+                    <span>😂</span>
+                    Bhul kese sakta...mein
+                </div>
+
+                <div class="issue-name">
+                    The most important message
+                    has not been deployed yet.
+                </div>
+
+                <div class="issue-detail">
+                    reason:
+                    <strong>Someone wanted to say it properly. ❤️</strong>
+                </div>
+
+            </div>
+
+            <p class="main-description">
+                Everything is ready...
+                except for one little thing.
+            </p>
+
+            <p class="sub-description">
+                The final message needs to be deployed. 💌
+            </p>
+
+            <button
+                    class="primary-btn"
+                    onclick="deployFinalMessage()"
+            >
+                🤌🏽 Deploy the Message
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 6 — BIRTHDAY REVEAL
+         ===================================================== -->
+
+    <section id="birthday-screen" class="screen birthday-screen">
+
+        <div class="birthday-reveal">
+
+            <div class="celebration-glow"></div>
+
+
+            <div class="success-badge">
+                ✓ HTTP 200 OK
+            </div>
+
+
+            <div class="cake-animation">
+                🎂
+            </div>
+
+
+            <p class="celebration-label">
+                DEPLOYMENT SUCCESSFUL
+            </p>
+
+
+            <h1 class="birthday-title">
+                HAPPY<br>
+                BIRTHDAY
+            </h1>
+
+
+            <h2 class="person-name">
+                PAGAL LADKI 💖
+            </h2>
+
+
+            <div class="release-card">
+
+                <div class="release-item">
+
+                    <span>
+                        Release
+                    </span>
+
+                    <strong>
+                        v22.0
+                    </strong>
+
+                </div>
+
+
+                <div class="release-item">
+
+                    <span>
+                        Status
+                    </span>
+
+                    <strong>
+                        ✨ Perfect
+                    </strong>
+
+                </div>
+
+
+                <div class="release-item">
+
+                    <span>
+                        Uptime
+                    </span>
+
+                    <strong>
+                        8030 days 🫣
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p class="birthday-subtitle">
+                May this year bring you
+                beautiful moments,
+                lots of reasons to smile,
+                and memories you'll always want to keep. ✨
+                <br>
+                You deserve a wonderful year ahead. ❤️
+            </p>
+
+
+            <button
+                    class="primary-btn reveal-btn"
+                    onclick="goToScreen('memories-screen')"
+            >
+                💌 One More Thing...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 7 — MEMORIES
+         ===================================================== -->
+
+    <section id="memories-screen" class="screen">
+
+        <div class="birthday-card memories-card">
+
+            <div class="screen-icon">
+                📸
+            </div>
+
+            <div class="small-label">
+                PHOTOS NOT FOUND
+            </div>
+
+            <h4>
+                Fetched from cached Database storage. ✨
+            </h4>
+
+
+            <div class="photo-carousel">
+
+                <div class="photo-track">
+
+
+                    <div class="photo-card">
+
+                        <img
+                                src="images/photo1.jpg"
+                                alt=""
+                        >
+
+                        <div class="photo-caption">
+                            ✨ 
+                        </div>
+
+                    </div>
+
+
+                    <!-- <div class="photo-card">
+
+                        <img
+                                src="images/photo2.jpg"
+                                alt="Memory 2"
+                        >
+
+                        <div class="photo-caption">
+                            💕 Another little memory
+                        </div>
+
+                    </div> -->
+
+
+                    <div class="photo-card">
+
+                        <img
+                                src="images/photo3.jpg"
+                                alt="Memory 3"
+                        >
+
+                        <div class="photo-caption">
+                            🌸 A moment worth keeping
+                        </div>
+
+                    </div>
+
+
+                    <div class="photo-card">
+
+                        <img
+                                src="images/photo4.jpg"
+                                alt="Memory 4"
+                        >
+
+                        <div class="photo-caption">
+                            💖 More memories to come
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="carousel-hint">
+                ← Swipe to explore →
+            </div>
+
+
+            <button
+                    class="primary-btn"
+                    onclick="goToScreen('final-message-screen')"
+            >
+                💌 Read Final Message
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SCREEN 8 — FINAL MESSAGE
+         ===================================================== -->
+
+    <section id="final-message-screen" class="screen">
+
+        <div class="birthday-card final-message-card">
+
+            <div class="top-decoration final-decoration">
+                <span>✨</span>
+                <span>💖</span>
+                <span>✨</span>
+            </div>
+
+
+            <div class="screen-icon">
+                💌
+            </div>
+
+
+            <div class="small-label">
+                Dil ki lafzon.
+            </div>
+
+
+            <h6>
+                Agle bhag 👇🏽
+            </h6>
+
+
+            <div class="message-box">
+
+                <p>
+                    Janamdin ki dher sare badhai,
+                    <strong>Chanchal..</strong>! 🎂
+                </p>
+                    
+                <p>
+                    term and condition apply! <br>
+                    Yanni. Sabdho ki matra ki galtiyann ko nazarandaaz karein.
+                    Aur dil ki baatein dil tak pahunchaye. 
+                </p>
+
+                <p>
+                   
+                </p>
+
+
+                <p>
+                   
+                </p>
+                <p>
+                    Happy Birthday once again. 🎂
+                </p>
+
+            </div>
+
+            <div class="message-box">
+
+                <p>
+                    Janamdin ki dher sare badhai,
+                    <strong>Chanchal..</strong>! 🎂
+                </p>
+                    
+                <p>
+                    term and condition apply! <br>
+                    Yanni. Sabdho ki matra ki galtiyann ko nazarandaaz karein.
+                    Aur dil ki baatein dil tak pahunchaye. 
+                </p>
+
+                <p>
+                   
+                </p>
+
+
+                <p>
+                   
+                </p>
+                <p>
+                    Happy Birthday once again. 🎂
+                </p>
+
+            </div>
+
+
+            <div class="final-signature">
+                — Agle bhag phir kabhi ❤️
+            </div>
+
+
+            <button
+                    class="secondary-btn"
+                    onclick="restartExperience()"
+            >
+                🔄 shuru se shurur karein
+            </button>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     CONFETTI CONTAINER
+     ========================================================= -->
+
+<div
+        id="confetti-container"
+        class="confetti-container"
+></div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
